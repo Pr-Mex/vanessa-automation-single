@@ -6,7 +6,7 @@
    "СтрокаПодключенияКБазе":"ENTERPRISE /F./ServiceBases/v83ServiceBase8314",
    "EpfДляИнициализацияБазы": "./epf/init.epf",
    "ПараметрыДляИнициализацияБазы": "./epf/init.json",
-   "ПутьКVanessaBehavior": "./../vanessa-automation-single.epf",
+   "ПутьКVanessaAutomation": "./../vanessa-automation-single.epf",
    "КаталогФич": "./features",
    "КаталогОтносительноКоторогоНадоСтроитьИерархию": "./features",
    "УровеньОтчета1": "#report.epic=;Каталог1",
