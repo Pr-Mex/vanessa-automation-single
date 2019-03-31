@@ -1,8 +1,8 @@
 {
    "КаталогиДляОчистки":[
-   ".\ServiceBases\allurereport",
-   ".\ServiceBases\cucumber",
-   ".\ServiceBases\junitreport"
+   ".\\ServiceBases\\allurereport",
+   ".\\ServiceBases\\cucumber",
+   ".\\ServiceBases\\junitreport"
    ],
    "ВариантыСборок":[
    ]
