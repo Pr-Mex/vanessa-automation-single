@@ -23448,4 +23448,5 @@
 		<verticalAlignment>Bottom</verticalAlignment>
 		<textPlacement>Auto</textPlacement>
 	</format>
+	<textDirection>LeftToRight</textDirection>
 </document>
