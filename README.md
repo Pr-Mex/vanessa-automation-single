@@ -9,6 +9,6 @@ Vanessa-Automation-Single удобно использовать в состав�
 
 [Телеграм канал](https://t.me/testspro1c), где можно обсудить Ванессу и всё, что связано с тестированием в 1С.
 [![Открытый чат проекта https://gitter.im/vanessa-automation](https://badges.gitter.im/vanessa-automation.svg)](https://gitter.im/vanessa-automation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](http://84.237.195.35:32005/buildStatus/icon?job=VASingleFullCheck)](http://84.237.195.35:32005/job/VASingleFullCheck/)
+[![Build Status](http://vanessa.bit-erp.ru/buildStatus/icon?job=VASingleFullCheck)](http://vanessa.bit-erp.ru/job/VASingleFullCheck/)
 
 
