@@ -44,7 +44,7 @@
    "СпособСнятияСкриншотовВнешнейКомпонентой": "2",
    "ДелатьСкриншотПриВозникновенииОшибки": "Истина",
    "ОстановкаПриВозникновенииОшибки": "Ложь",
-   "ТаймаутЗапуска1С": "120",
+   "ТаймаутЗапуска1С": "300",
    "СниматьСкриншотКаждогоОкна1С": "Истина",
    "КаталогOutputСкриншоты": "./tools/ServiceBases/ScreenShots",
    "ИмяФайлаЛогВыполненияСценариев": "./tools/ServiceBases/log8322.txt",
@@ -55,7 +55,7 @@
    "ОбновлятьДеревоПриНачалеВыполненияСценария": "Ложь",
    "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "./tools/ServiceBases/BuildStatus.log",
    "ВерсияПлатформыДляГенерацииEPF": "C:/Program Files (x86)/1cv8/8.3.10.2772/bin",
-   "ТаймаутЗапуска1С": "120",
+   "ТаймаутЗапуска1С": "300",
    "СписокТеговИсключение":[
    "IgnoreOnCIMainBuild",
    "IgnoreOn8322",
@@ -63,7 +63,7 @@
    "IgnoreOnServer", 
    "Ignore"
    ],
-   "ВыполнятьШагиАссинхронно":"Ложь",
+   "ВыполнятьШагиАсинхронно":"Ложь",
    "ЗаписьВидеоКомандаНачатьЗаписьВидео": '"C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe" screen://  -I rc --rc-quiet --rc-host=127.0.0.1:8082 --nommx :screen-mouse-image="<screenmouseimage>" :screen-fps=<fps> :screen-width=<screenwidth> :screen-height=<screenheight> :screen-top=0 :screen-left=0 :screen-caching=100 :sout=#transcode{vcodec=mp4v,vb=400,fps=<fps>,scale=1,width=<screenwidth>,height=<screenheight>,acodec=none}:duplicate{dst=std{access=file,mux=mp4,dst=<dst>}}',
    "ЗаписьВидеоФайлКурсораМышки": "./tools/VideoTools/mouse.png",
    "ЗаписьВидеоКаталогДляВременныхФайлов": "./tools/VideoTemp",

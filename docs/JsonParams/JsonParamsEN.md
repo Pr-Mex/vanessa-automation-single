@@ -7,7 +7,7 @@
 * Special
 
       * **GlobalVars {GlobalVars}**:
-An array of key and value objects. This array will be loaded into global variables and will be available when executing the script in the ContextSaved object.
+A structure that will contain key and value pairs. This structure will be loaded into global variables, and these variables will be available when executing the script in the ContextPersisted object.
 
 ## Main settings
 
@@ -22,12 +22,20 @@ An array of key and value objects. This array will be loaded into global variabl
       * **filtertags**:
          Enter tags in the field. If the tag is NOT detected in the feature, the whole feature will not be uploaded. You can also upload only the feature scenarios, which contain the tags from the list.
 
-*  Scenario filter
+*  Scenario filter and feature filter
 
       * **scenariofilter**:
-         Allows you to set the order in which scripts are executed. The scripts will be executed in the order they are listed.
-         Plus allows you to set a filter for executing scripts. Only scripts from the list will be executed.
-         The script in the list is indicated by its name.
+         Allows you to set a filter for executing scripts - only scripts from the list will be executed.
+         Scripts will be executed in the order they are specified in the feature file.
+         A script in the list is specified using its name.
+
+      * **FeaturesToRun**:
+         Allows you to set the order of execution of feature files.
+         Also sets the selection - only feature files from the list will be launched.
+         You can pass the full path to the feature file (c:\temp\my.feature).
+         You can pass the feature name without the full path (my.feature).
+         You can pass the feature name without the full path and without the file extension (my).
+         The setting is applied only if feature files are loaded from the directory.
 
 *  Feature file language
 
@@ -80,6 +88,12 @@ An array of key and value objects. This array will be loaded into global variabl
          The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
          When working with Vanessa Automation Single it is allowed to leave the field blank.
 
+      * **TemporaryFilesDirectory**:
+         The directory in which temporary script files will be created.
+         If a setting value is specified, then temporary script files will be created in it. If the setting value is not specified, then the user's temporary directory will be used. Usually this
+         "C:\USERS%username%\APPDATA\LOCAL\TEMP".
+         Setting is necessary because... Vanessa Automation can create bat files to run system commands, and some operating systems may prohibit running such files from the user's temporary directory.
+
 *  Smoke Tests
 
       * **SmokeTestsDirectoryOutputFiles**:
@@ -91,11 +105,14 @@ An array of key and value objects. This array will be loaded into global variabl
       * **SmokeTestsPathToFileSettingsScripts**:
          Path to the script configuration file (the configuration file can be created on the "Script Settings" tab in the "Smoke Test Generator" window).
 
+      * **SmokeTestsCleanDirectoryOutputFiles**:
+         If set, feature files in the output files directory will be deleted before tests are generated.
+
       * **SmokeTestsOnlyEnteredObjects**:
          When this flag is enabled, only objects for which there is at least one element not marked for deletion in the current infobase will participate in the generation of feature files of extended actions.
 
       * **SmokeTestsOnlyChangedRelativeToVendorConfiguration**:
-         When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase configurator will be launched.
+         When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase configurator will be launched with the current user and an empty password.
 
       * **SmokeTestsVendorConfigurationName**:
          The name of the vendor configuration to compare configurations with.
@@ -157,18 +174,22 @@ An array of key and value objects. This array will be loaded into global variabl
          If the parameter is set, the /Out <FileName> parameter will be added when the test client is started.
          The file name will be generated according to the rule TestingClientName+LaunchDateTime.
 
-      * **DisableScheduledJobsExecutionForFileInfobase**:
-         If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off
+      * **AdditionalParametersForLaunchingTheTestingClient**:
+         The field specifies additional keys for launching the testing client, which will be transferred to the launched 1C session.
 
       * **OnlyOneTestClientAllowedToRun**:
          If this option is enabled, control will be enabled that more than one testing client cannot be connected at the same time.
          This can be useful if the computers on which the tests are run have a limited amount of RAM and you need to control the launch of unnecessary processes.
+
+      * **DisableScheduledJobsExecutionForFileInfobase**:
+         If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off
 
       * **CheckingServerCallsInEventHandlers**:
          Adds the string /EnableCheckServerCalls to the launch options of test clients.
          When the test completes, it checks the "Technical Support Information" window for special messages about context server calls.
          If such messages were found, a script error will be raised.
          Detailed information here
+         https://its.1c.ru/db/pubv8devui/content/282/1
 
 *  TestClient debug
 
@@ -257,6 +278,15 @@ An array of key and value objects. This array will be loaded into global variabl
       * **NumberOfAttemptsToExecuteTheScript**:
          If the setting specifies a value of more than one, then if the script was not executed successfully, several more attempts to execute the script will be made.
 
+      * **DisableForFieldsAbilityToOverwriteTextWhenServerCall**:
+         There is a problem that when synchronizing the state of the form after the server call has completed, the text that the user is currently editing may be overwritten.
+         In tests, this can manifest itself in such a way that the test entered a value into a field, but before it began working with another field, this value was returned to its previous state.
+         This option enables a mechanism where the "EditTextUpdate" property of form fields will change after calling the step
+         ```Gherkin
+         Then "WindowTitle" window is opened
+         ```
+         For this option to work, the VAExtension extension must be installed in the testing client database.
+
       * **numberofattemptstoperformanaction**:
          Sets maximum tries number for multiple steps.
          Increasing this parameter may make scenarios execution more stable on the weak hardware.
@@ -282,6 +312,11 @@ An array of key and value objects. This array will be loaded into global variabl
          And I wait "WindowTitle" window opening in 60 seconds
          And I wait the window with header different from "WindowTitle" opening in 60 seconds
          ```
+
+      * **MaximumExecutionTimeAction**:
+         Sets the maximum execution time for actions that return a value to the test manager.
+         If the specified time is exceeded, the exception "The maximum execution time of the action on the testing client side has been exceeded" is generated. In this case, the action will continue.
+         If the parameter is 0, commands wait until the end of execution without checking the elapsed time since the start of execution.
 
       * **safeexecutionofsteps**:
          Adds delay for multiple actions, which may cause unstable scenario execution, e.g.: move to line, field value check etc.
@@ -338,6 +373,10 @@ An array of key and value objects. This array will be loaded into global variabl
 
    * **outputscreenshot**:
       Screenshots directory.
+
+   * **ProcessesForTakingScreenshots**:
+      A semicolon-separated list of process names.
+      You can use the * character to escape one or more characters in a process name.
 
    * **screencaptureaddinmethod**:
       Full Screen - Gets a screenshot of the entire screen, including the operating system taskbar.
@@ -409,6 +448,9 @@ An array of key and value objects. This array will be loaded into global variabl
          Vanessa Automation log file name.
          If the field is empty, then the log will not be output to a text file.
 
+      * **maskpwdinlog**:
+         The user's password is masked in the log /P"*****"
+
 *  Allure
 
    *  Main settings
@@ -418,6 +460,9 @@ An array of key and value objects. This array will be loaded into global variabl
 
          * **setvariablevaluesinstepsallurereport**:
             If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.
+
+         * **allureexcludevars**:
+            Enter tags in the field. If the tag is detected in the feature, the whole feature will not be uploaded. If the tag is found in the scenario, only this scenario will not be uploaded.
 
          * **allurepath**:
             Allure reports directory. When run locally, the directory will be cleaned up each time the scripts are run.
@@ -484,6 +529,8 @@ An array of key and value objects. This array will be loaded into global variabl
             It is also necessary that commands of the form are executed on the PC:
             magick convert file.pdf file.png
             An example result can be seen here.
+            https://www.ghostscript.com/download.html
+            https://www.youtube.com/watch?v=1xnp6CxCktA&list=PLalsS95_a3a8iVPCLjFMY2wj4ZMG2XpVH&index=3&ab_channel=VSL
 
    *  Allure labels data
 
@@ -506,6 +553,7 @@ An array of key and value objects. This array will be loaded into global variabl
          From version 13.12 screenshots can be added to jUnit.
          For everything to work correctly - the Screenshot Directory must be located inside the Project Directory.
          Save the screenshots folder as artifacts.
+         https://docs.gitlab.com/ee/ci/unit_test_reports.html#viewing-junit-screenshots-on-gitlab
 
 *  ASDS
 
@@ -514,6 +562,12 @@ An array of key and value objects. This array will be loaded into global variabl
 
       * **modelingreportpath**:
          Report directory.
+
+      * **ModelingConfigurationName**:
+         Configuration name for the report
+
+      * **ModelingConfigurationVersion**:
+         Configuration version for report
 
 *  Cucumber
 
@@ -645,6 +699,7 @@ An array of key and value objects. This array will be loaded into global variabl
          * **VariantsHTMLInstructions**:
             3D Carousel variant - adapted for both PC and mobile
             Details here.
+            https://www.youtube.com/watch?v=dMmjG97nJ_w
 
          * **htmlstyles**:
             Style File
@@ -653,6 +708,7 @@ An array of key and value objects. This array will be loaded into global variabl
             Speech Synthesis technology built into browsers is used. Speech synthesis (text-to-speech or tts) involves receiving the synthesized text of the application and its speech reproduction.
             More detailed 
             Text playback starts when you click on the step image.
+            https://developer.mozilla.org/ru/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API
 
       * **markdowncreate**:
          If the checkbox is on, MarkDown screencast will be created during scenario execution.
@@ -690,15 +746,33 @@ An array of key and value objects. This array will be loaded into global variabl
          * **ttstype**:
             Specifies the narrator's voice.
 
+      *  Voiceover from 1C
+
+            * **1CttsLogin**:
+               Login for authorization in the speech synthesis service
+
+            * **1CttsVoice**:
+               Voice for speech generation in the service
+
+            * **1CttsPassword**:
+               Password for authorization in the speech synthesis service.
+               The password is specified in the text file.
+
+            * **1CttsSpeed**:
+               Speed (tempo) of synthesized speech.
+               Speech speed is specified by a fractional number in the range from 0.8 to 2.
+
       *  Microsoft TTS
 
             * **audioenginetts**:
                The console command to be used when converting text to speech.
                The  balabolka_console program is used.
+               http://www.cross-plus-a.ru/bconsole.html
 
             * **ttsvoice**:
                Specifies which voice will be used for voice acting. It is allowed to indicate not the full name of the voice in the system, but only a part, for example "Elena".
                You will need to install Microsoft Speech Platform x32 and Server Runtime Languages.
+               https://www.microsoft.com/en-us/download/details.aspx?id=27225
 
             * **speedofspeech**:
                Narrator's speech speed.
@@ -709,14 +783,20 @@ An array of key and value objects. This array will be loaded into global variabl
             * **yandexttslanguage**:
                Sets the language in which the speaker will speak. Details here.
                To control accent and pronunciation, see here.
+               https://cloud.yandex.ru/docs/speechkit/tts/request
+               https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/
 
             * **yandexttsvoice**:
                Sets the voice for the announcer to speak. Details here.
                To control accent and pronunciation, see here.
+               https://cloud.yandex.ru/docs/speechkit/tts/request
+               https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/
 
             * **yandexttsemotion**:
                Sets the emotion with which the announcer will speak. Details here.
                To control accent and pronunciation, see here.
+               https://cloud.yandex.ru/docs/speechkit/tts/request
+               https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/
 
             * **yandexttsspeed**:
                The speed (tempo) of synthesized speech.
@@ -736,6 +816,7 @@ An array of key and value objects. This array will be loaded into global variabl
                   https://console.cloud.yandex.ru/folders/b1gheo81t4a6eaafe5vd
                   (Directory ID - b1gheo81t4a6eaafe5vd)
                   Retrieving a Directory ID
+                  https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id
 
                * **yandexttsoauthtoken**:
                   The OAuth token is used in the authentication procedure in Yandex.Cloud
@@ -754,12 +835,15 @@ An array of key and value objects. This array will be loaded into global variabl
 
             * **amazonttslanguage**:
                See the correspondence of language and voice here.
+               https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html
 
             * **amazonttsvoice**:
                See the correspondence of language and voice here.
+               https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html
 
             * **amazonttsengine**:
                See the options for the value for the "Engine" field here.
+               https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html
 
             * **amazonttsregion**:
                The field specifies the region parameter. The default is us-east-1.
@@ -797,6 +881,7 @@ An array of key and value objects. This array will be loaded into global variabl
             * **sberttsvoice**:
                Sets the voice to generate.
                Examples of voices can be found here
+               https://developer.sberdevices.ru/docs/ru/smartservices/synthesize_smartspeech#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B8%D0%BD%D1%82%D0%B5%D0%B7%D0%B0
 
       *  Voice test
 
@@ -822,6 +907,8 @@ An array of key and value objects. This array will be loaded into global variabl
          Allows you to create video instructions.
          A video describing the settings is in this playlist.
          It is also recommended to read this FAQ.
+         https://www.youtube.com/watch?v=QSDvDQDLyLk&list=PLalsS95_a3a_m9ieRJgD3XPWCP9goa9GC
+         https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/FAQ/MakeAutoVideo.md
 
       * **videopath**:
          Directory where will be placed result of assembly videos or animated screencast.
@@ -884,6 +971,7 @@ An array of key and value objects. This array will be loaded into global variabl
                "C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
                Download: https://imagemagick.org/script/download.php
                For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)
+               https://imagemagick.org/script/download.php
 
          * **comandrecvideo**:
             Command to start VLC for screen recording. You can specify bitrate and other parameters.

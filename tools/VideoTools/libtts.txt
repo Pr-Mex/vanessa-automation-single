@@ -1,7 +1,7 @@
 ﻿Behavior-driven|бихейвиа дривен
 development|дев^елопмент
 BDD|би ди ди
-VAExtension|Вэа экстэншен.
+VAExtension|Вэ-аа экстэншен.
 VanessaExt|Ванесса Экст
 vanessa-automation-single|ванэсса автомэйшен сингл
 Ванесса|Ванэсса
@@ -177,3 +177,9 @@ Cucumber|кукумбер
 CSS|цээсэс
 markdown|маркдаун
 ИТС|и тэ эс
+bat|бат
+QA|кью эй
+FTP|эф ти пи
+Artifactory|артифактори
+автотесты|автотэсты
+интеграционные|интэграционные

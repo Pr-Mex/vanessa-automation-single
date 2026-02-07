@@ -66,6 +66,23 @@
 			<Template>ДляДополненияФормы2</Template>
 			<Template>РазныеДействияСФормой14</Template>
 			<Template>ДляРазныеДействияСФормой14</Template>
+			<Template>РазныеДействияСФормой15</Template>
+			<Template>ДляРазныеДействияСФормой15</Template>
+			<Template>РазныеДействияСФормой16</Template>
+			<Template>ДляРазныеДействияСФормой16</Template>
+			<Template>РазныеДействияСФормой17</Template>
+			<Template>ДляРазныеДействияСФормой17</Template>
+			<Template>РазныеДействияСФормой18</Template>
+			<Template>ДляРазныеДействияСФормой18</Template>
+			<Template>ДляРазныеДействияСФормой18_2</Template>
+			<Template>selectRow</Template>
+			<Template>ДляselectRow</Template>
+			<Template>selectRow2</Template>
+			<Template>ДляselectRow2</Template>
+			<Template>selectRow3</Template>
+			<Template>ДляselectRow3</Template>
+			<Template>clearAllRowsSelection</Template>
+			<Template>ДляclearAllRowsSelection</Template>
 		</ChildObjects>
 	</ExternalDataProcessor>
 </MetaDataObject>

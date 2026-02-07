@@ -16,5 +16,5 @@ Scenario: Examples of Gherkin keywords
 
 	// See this link for a complete list of keywords.
 	// To open the link you need to do ctrl+Click
-	// https://github.com/cucumber/common/blob/main/gherkin/gherkin-languages.json
+	// https://github.com/cucumber/gherkin/blob/main/gherkin-languages.json
 

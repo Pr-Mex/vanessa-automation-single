@@ -16,5 +16,5 @@
 
 	// Полный список ключевых слов смотри по этой ссылке.
 	// Чтобы открыть ссылку надо сделать ctrl+Click
-	// https://github.com/cucumber/common/blob/main/gherkin/gherkin-languages.json
+	// https://github.com/cucumber/gherkin/blob/main/gherkin-languages.json
 

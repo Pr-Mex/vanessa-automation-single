@@ -1467,11 +1467,11 @@
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
-										<v8:content>Дымовые тесты</v8:content>
+										<v8:content>Генератор дымовых тестов</v8:content>
 									</v8:item>
 									<v8:item>
 										<v8:lang>en</v8:lang>
-										<v8:content>Smoke tests</v8:content>
+										<v8:content>Smoke tests generator</v8:content>
 									</v8:item>
 								</Title>
 								<ExtendedTooltip name="VanessaEditorОткрытьФормуГенератораСценариевРасширеннаяПодсказка" id="3989"/>
@@ -1495,6 +1495,11 @@
 								<Type>CommandBarButton</Type>
 								<CommandName>Form.Command.ОткрытьИнструментПодготовкаИЗагрузкаДанных</CommandName>
 								<ExtendedTooltip name="VanessaEditorОткрытьИнструментПодготовкаИЗагрузкаДанныхРасширеннаяПодсказка" id="2933"/>
+							</Button>
+							<Button name="VanessaEditorОткрытьСериализаторМакетов" id="4059">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОткрытьСериализаторМакетов</CommandName>
+								<ExtendedTooltip name="VanessaEditorОткрытьСериализаторМакетовРасширеннаяПодсказка" id="4060"/>
 							</Button>
 						</ChildItems>
 					</ButtonGroup>
@@ -2696,52 +2701,6 @@
 							</Button>
 						</ChildItems>
 					</ButtonGroup>
-					<ButtonGroup name="ГруппаVanessaEditorВидеоАудио" id="3094">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Видео/аудио</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Video/audio</v8:content>
-							</v8:item>
-						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Видео/аудио</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Video/audio</v8:content>
-							</v8:item>
-						</ToolTip>
-						<Representation>Compact</Representation>
-						<ExtendedTooltip name="ГруппаVanessaEditorВидеоАудиоРасширеннаяПодсказка" id="3095"/>
-						<ChildItems>
-							<Button name="ПанельVanessaEditorОзвучиваниеВыполненияСценария" id="3096">
-								<Type>CommandBarButton</Type>
-								<Check>true</Check>
-								<CommandName>Form.Command.ВключитьВыключитьОзвучиваниеВыполненияСценария</CommandName>
-								<Picture>
-									<xr:Abs>Picture.png</xr:Abs>
-									<xr:LoadTransparent>false</xr:LoadTransparent>
-								</Picture>
-								<ExtendedTooltip name="ПанельVanessaEditorОзвучиваниеВыполненияСценарияРасширеннаяПодсказка" id="3097"/>
-							</Button>
-							<Button name="ПанельVanessaEditorФормаВключитьВыключитьЗаписьВидео" id="3017">
-								<Type>CommandBarButton</Type>
-								<Check>true</Check>
-								<CommandName>Form.Command.ВключитьВыключитьЗаписьВидео</CommandName>
-								<Picture>
-									<xr:Abs>Picture.png</xr:Abs>
-									<xr:LoadTransparent>false</xr:LoadTransparent>
-								</Picture>
-								<ExtendedTooltip name="ПанельVanessaEditorФормаВключитьВыключитьЗаписьВидеоРасширеннаяПодсказка" id="3018"/>
-							</Button>
-						</ChildItems>
-					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorОбучение" id="3135">
 						<Title>
 							<v8:item>
@@ -3441,6 +3400,52 @@
 							</Button>
 						</ChildItems>
 					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorВидеоАудио" id="3094">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Видео/аудио</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Video/audio</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Видео/аудио</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Video/audio</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorВидеоАудиоРасширеннаяПодсказка" id="3095"/>
+						<ChildItems>
+							<Button name="ПанельVanessaEditorОзвучиваниеВыполненияСценария" id="3096">
+								<Type>CommandBarButton</Type>
+								<Check>true</Check>
+								<CommandName>Form.Command.ВключитьВыключитьОзвучиваниеВыполненияСценария</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ПанельVanessaEditorОзвучиваниеВыполненияСценарияРасширеннаяПодсказка" id="3097"/>
+							</Button>
+							<Button name="ПанельVanessaEditorФормаВключитьВыключитьЗаписьВидео" id="3017">
+								<Type>CommandBarButton</Type>
+								<Check>true</Check>
+								<CommandName>Form.Command.ВключитьВыключитьЗаписьВидео</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ПанельVanessaEditorФормаВключитьВыключитьЗаписьВидеоРасширеннаяПодсказка" id="3018"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorМасштаб" id="2462">
 						<Title>
 							<v8:item>
@@ -3622,6 +3627,13 @@
 				<CommandName>Form.Command.VanessaEditorПерезапуститьКакМенеджерТестирования</CommandName>
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="VanessaEditorПерезапуститьКакМенеджерТестированияРасширеннаяПодсказка" id="3958"/>
+			</Button>
+			<Button name="ФормаОбработчикВключенияПоказаСправкиПоЭлементуПодКурсоромМышки" id="4052">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбработчикВключенияПоказаСправкиПоЭлементуПодКурсоромМышки</CommandName>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОбработчикВключенияПоказаСправкиПоЭлементуПодКурсоромМышкиРасширеннаяПодсказка" id="4053"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -4800,18 +4812,18 @@
 																	</Button>
 																</ChildItems>
 															</ButtonGroup>
-															<ButtonGroup name="ГруппаБрейпоинты" id="1478">
+															<ButtonGroup name="ГруппаБрейкпоинты" id="1478">
 																<Title>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>Брейпоинты</v8:content>
+																		<v8:content>Брейкпоинты</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
 																		<v8:content>Breakpoints</v8:content>
 																	</v8:item>
 																</Title>
-																<ExtendedTooltip name="ГруппаБрейпоинтыРасширеннаяПодсказка" id="1479"/>
+																<ExtendedTooltip name="ГруппаБрейкпоинтыРасширеннаяПодсказка" id="1479"/>
 																<ChildItems>
 																	<Button name="ДеревоТестовКонтекстноеМенюБрейкпоинт" id="1480">
 																		<Type>CommandBarButton</Type>
@@ -4904,7 +4916,7 @@
 																		</Title>
 																		<ExtendedTooltip name="ДеревоТестовКонтекстноеМенюБрейкпоинтРасширеннаяПодсказка" id="1481"/>
 																	</Button>
-																	<Button name="ДеревоТестовКонтекстноеМенюБрейпоинтУбратьВсе" id="1482">
+																	<Button name="ДеревоТестовКонтекстноеМенюБрейкпоинтУбратьВсе" id="1482">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.БрейкпоинтУбратьВсе</CommandName>
 																		<Title>
@@ -4993,7 +5005,7 @@
 																				<v8:content>Loại bỏ tất cả các điểm ngắt</v8:content>
 																			</v8:item>
 																		</Title>
-																		<ExtendedTooltip name="ДеревоТестовКонтекстноеМенюБрейпоинтУбратьВсеРасширеннаяПодсказка" id="1483"/>
+																		<ExtendedTooltip name="ДеревоТестовКонтекстноеМенюБрейкпоинтУбратьВсеРасширеннаяПодсказка" id="1483"/>
 																	</Button>
 																</ChildItems>
 															</ButtonGroup>
@@ -6824,7 +6836,7 @@
 																					</Button>
 																				</ChildItems>
 																			</ButtonGroup>
-																			<Popup name="ГруппаКонтекстногоМенюVanessaEditorБрейпоинты" id="2494">
+																			<Popup name="ГруппаКонтекстногоМенюVanessaEditorБрейкпоинты" id="2494">
 																				<Title>
 																					<v8:item>
 																						<v8:lang>ru</v8:lang>
@@ -6835,7 +6847,7 @@
 																						<v8:content>Breakpoints</v8:content>
 																					</v8:item>
 																				</Title>
-																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorБрейпоинтыРасширеннаяПодсказка" id="2495"/>
+																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorБрейкпоинтыРасширеннаяПодсказка" id="2495"/>
 																				<ChildItems>
 																					<Button name="VanessaEditorКонтекстноеМенюБрейкпоинт" id="2496">
 																						<Type>CommandBarButton</Type>
@@ -6852,7 +6864,7 @@
 																						</Title>
 																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюБрейкпоинтРасширеннаяПодсказка" id="2497"/>
 																					</Button>
-																					<Button name="VanessaEditorКонтекстноеМенюБрейпоинтУбратьВсе" id="2498">
+																					<Button name="VanessaEditorКонтекстноеМенюБрейкпоинтУбратьВсе" id="2498">
 																						<Type>CommandBarButton</Type>
 																						<CommandName>Form.Command.VanessaEditorRemoveBreakPoints</CommandName>
 																						<Title>
@@ -6865,7 +6877,7 @@
 																								<v8:content>Remove all breakpoints</v8:content>
 																							</v8:item>
 																						</Title>
-																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюБрейпоинтУбратьВсеРасширеннаяПодсказка" id="2499"/>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюБрейкпоинтУбратьВсеРасширеннаяПодсказка" id="2499"/>
 																					</Button>
 																				</ChildItems>
 																			</Popup>
@@ -7013,6 +7025,26 @@
 																							</Button>
 																						</ChildItems>
 																					</Popup>
+																				</ChildItems>
+																			</ButtonGroup>
+																			<ButtonGroup name="VanessaEditorКонтекстноеМенюГруппаЗаменитьШаг" id="4048">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Заменить шаг</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Replace step</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюГруппаЗаменитьШагРасширеннаяПодсказка" id="4049"/>
+																				<ChildItems>
+																					<Button name="VanessaEditorКонтекстноеМенюЗаменитьШагПроверкиПоИмениНаШагПроверкиПоЗаголовку" id="4050">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ЗаменитьШагПроверкиПоИмениНаШагПроверкиПоЗаголовку</CommandName>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюЗаменитьШагПроверкиПоИмениНаШагПроверкиПоЗаголовкуРасширеннаяПодсказка" id="4051"/>
+																					</Button>
 																				</ChildItems>
 																			</ButtonGroup>
 																			<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorРаботаСТаблицами" id="2506">
@@ -12578,44 +12610,110 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Отбор по сценариям</v8:content>
+															<v8:content>Отбор по сценариям и фичам</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>Scenario filter</v8:content>
+															<v8:content>Scenario filter and feature filter</v8:content>
 														</v8:item>
 													</Title>
+													<Group>AlwaysHorizontal</Group>
 													<Behavior>Collapsible</Behavior>
 													<Collapsed>true</Collapsed>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаОтборПоСценариямРасширеннаяПодсказка" id="3271"/>
 													<ChildItems>
-														<InputField name="СписокСценариевДляВыполнения" id="3223">
-															<DataPath>Объект.СписокСценариевДляВыполнения</DataPath>
-															<TitleLocation>Top</TitleLocation>
-															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-															<ClearButton>true</ClearButton>
-															<ContextMenu name="СписокСценариевДляВыполненияКонтекстноеМеню" id="3224"/>
-															<ExtendedTooltip name="СписокСценариевДляВыполненияРасширеннаяПодсказка" id="3225">
-																<Width>50</Width>
-																<AutoMaxWidth>false</AutoMaxWidth>
-																<HorizontalStretch>false</HorizontalStretch>
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>Allows you to set the order in which scripts are executed. The scripts will be executed in the order they are listed.
-Plus allows you to set a filter for executing scripts. Only scripts from the list will be executed.
-The script in the list is indicated by its name.</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Позволяет задать порядок выполнения сценариев. Сценарии будут выполняться в том порядке как они указаны в списке.
-Плюс позволяет задать фильтр на выполнение сценариев. Будут выполняться только сценарии из списка.
+														<UsualGroup name="ГруппаОтборПоСценариямЛевыйСтолбец" id="4061">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отбор по сценариям левый столбец</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group selection by scenarios left column</v8:content>
+																</v8:item>
+															</Title>
+															<Width>50</Width>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтборПоСценариямЛевыйСтолбецРасширеннаяПодсказка" id="4062"/>
+															<ChildItems>
+																<InputField name="СписокСценариевДляВыполнения" id="3223">
+																	<DataPath>Объект.СписокСценариевДляВыполнения</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ClearButton>true</ClearButton>
+																	<ContextMenu name="СписокСценариевДляВыполненияКонтекстноеМеню" id="3224"/>
+																	<ExtendedTooltip name="СписокСценариевДляВыполненияРасширеннаяПодсказка" id="3225">
+																		<Width>50</Width>
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<HorizontalStretch>false</HorizontalStretch>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Allows you to set a filter for executing scripts - only scripts from the list will be executed.
+Scripts will be executed in the order they are specified in the feature file.
+A script in the list is specified using its name.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Позволяет задать фильтр на выполнение сценариев - будут выполняться только сценарии из списка.
+Сценарии будут выполняться в том порядке как они указаны в фича файле.
 Сценарий в списке указывается с помощью его имени.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-														</InputField>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаОтборПоСценариямПравыйСтолбец" id="4063">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отбор по сценариям правый столбец</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group selection by scenarios right column</v8:content>
+																</v8:item>
+															</Title>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтборПоСценариямПравыйСтолбецРасширеннаяПодсказка" id="4064"/>
+															<ChildItems>
+																<InputField name="СписокФичДляВыполнения" id="4065">
+																	<DataPath>Объект.СписокФичДляВыполнения</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ClearButton>true</ClearButton>
+																	<ContextMenu name="СписокФичДляВыполненияКонтекстноеМеню" id="4066"/>
+																	<ExtendedTooltip name="СписокФичДляВыполненияРасширеннаяПодсказка" id="4067">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Позволяет задать порядок выполнения фича файлов.
+Также устанавливает отбор - будут запускаться фича файлы только из списка.
+Можно передавать полный путь к фича файлу (c:\temp\my.feature).
+Можно передавать имя фичи без полного пути (my.feature).
+Можно передавать имя фичи без полного пути  и без расширения файла (my).
+Настройка применяется, только если происходит загрузка фича файлов из каталога.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Allows you to set the order of execution of feature files.
+Also sets the selection - only feature files from the list will be launched.
+You can pass the full path to the feature file (c:\temp\my.feature).
+You can pass the feature name without the full path (my.feature).
+You can pass the feature name without the full path and without the file extension (my).
+The setting is applied only if feature files are loaded from the directory.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаЯзык" id="2661">
@@ -13497,6 +13595,7 @@ Possible return statuses:
 																	<v8:content>System directories group right column</v8:content>
 																</v8:item>
 															</Title>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаСистемныеКаталогиПравыйСтолбецРасширеннаяПодсказка" id="3319"/>
@@ -13543,6 +13642,37 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																		<Event name="Opening">КаталогИнструментовОткрытие</Event>
 																	</Events>
 																</InputField>
+																<InputField name="КаталогВременныхФайлов" id="4040">
+																	<DataPath>Объект.КаталогВременныхФайлов</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ChoiceButton>true</ChoiceButton>
+																	<ClearButton>true</ClearButton>
+																	<OpenButton>true</OpenButton>
+																	<ContextMenu name="КаталогВременныхФайловКонтекстноеМеню" id="4041"/>
+																	<ExtendedTooltip name="КаталогВременныхФайловРасширеннаяПодсказка" id="4042">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>The directory in which temporary script files will be created.
+If a setting value is specified, then temporary script files will be created in it. If the setting value is not specified, then the user's temporary directory will be used. Usually this
+"C:\USERS%username%\APPDATA\LOCAL\TEMP".
+Setting is necessary because... Vanessa Automation can create bat files to run system commands, and some operating systems may prohibit running such files from the user's temporary directory.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Каталог, в котором будут создаваться временные файлов скриптов.
+Если указано значение настройки - тогда временные файлы скриптов будут создаваться в нём. Если значение настройки не указано, тогда будет использоваться временный каталог пользователя. Обычно это
+"C:\USERS%username%\APPDATA\LOCAL\TEMP".
+Настройка нужна, т.к. Vanessa Automation может создавать bat файлы для запуска системных команд, а в некоторых ОС может быть установлен запрет на запуск таких файлов из временного каталога пользователя.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="StartChoice">КаталогВременныхФайловНачалоВыбора</Event>
+																		<Event name="Opening">КаталогВременныхФайловОткрытие</Event>
+																	</Events>
+																</InputField>
 															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
@@ -13564,88 +13694,6 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаДымовыеТестыРасширеннаяПодсказка" id="3960"/>
 													<ChildItems>
-														<UsualGroup name="ГруппаДымовыеТестыЯзыкШагов" id="4009">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа дымовые тесты язык шагов</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Group of smoke tests language steps</v8:content>
-																</v8:item>
-															</Title>
-															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаДымовыеТестыЯзыкШаговРасширеннаяПодсказка" id="4010">
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Язык, на котором будут формироваться сценарии feature-файлов.</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>The language in which feature file scripts will be generated.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-															<ChildItems>
-																<RadioButtonField name="ДымовыеТестыЯзыкШагов" id="3980">
-																	<DataPath>Объект.ДымовыеТестыЯзыкШагов</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Язык шагов</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Language of steps</v8:content>
-																		</v8:item>
-																	</Title>
-																	<TitleLocation>Left</TitleLocation>
-																	<RadioButtonType>Tumbler</RadioButtonType>
-																	<ChoiceList>
-																		<xr:Item>
-																			<xr:Presentation/>
-																			<xr:CheckState>0</xr:CheckState>
-																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																				<Presentation>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Русский</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Russian</v8:content>
-																					</v8:item>
-																				</Presentation>
-																				<Value xsi:type="xs:string">ru</Value>
-																			</xr:Value>
-																		</xr:Item>
-																		<xr:Item>
-																			<xr:Presentation/>
-																			<xr:CheckState>0</xr:CheckState>
-																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																				<Presentation>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>English</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>English</v8:content>
-																					</v8:item>
-																				</Presentation>
-																				<Value xsi:type="xs:string">en</Value>
-																			</xr:Value>
-																		</xr:Item>
-																	</ChoiceList>
-																	<ContextMenu name="ДымовыеТестыЯзыкШаговКонтекстноеМеню" id="3981"/>
-																	<ExtendedTooltip name="ДымовыеТестыЯзыкШаговРасширеннаяПодсказка" id="3982"/>
-																</RadioButtonField>
-															</ChildItems>
-														</UsualGroup>
 														<UsualGroup name="ГруппаДымовыеТестыДваСтолбца" id="4011">
 															<Title>
 																<v8:item>
@@ -13678,6 +13726,88 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаДымовыеТестыЛевыйСтолбецРасширеннаяПодсказка" id="3962"/>
 																	<ChildItems>
+																		<UsualGroup name="ГруппаДымовыеТестыЯзыкШагов" id="4009">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа дымовые тесты язык шагов</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Group of smoke tests language steps</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаДымовыеТестыЯзыкШаговРасширеннаяПодсказка" id="4010">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Язык, на котором будут формироваться сценарии feature-файлов.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>The language in which feature file scripts will be generated.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																			<ChildItems>
+																				<RadioButtonField name="ДымовыеТестыЯзыкШагов" id="3980">
+																					<DataPath>Объект.ДымовыеТестыЯзыкШагов</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Язык шагов</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Language of steps</v8:content>
+																						</v8:item>
+																					</Title>
+																					<TitleLocation>Left</TitleLocation>
+																					<RadioButtonType>Tumbler</RadioButtonType>
+																					<ChoiceList>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Русский</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Russian</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">ru</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>English</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>English</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">en</Value>
+																							</xr:Value>
+																						</xr:Item>
+																					</ChoiceList>
+																					<ContextMenu name="ДымовыеТестыЯзыкШаговКонтекстноеМеню" id="3981"/>
+																					<ExtendedTooltip name="ДымовыеТестыЯзыкШаговРасширеннаяПодсказка" id="3982"/>
+																				</RadioButtonField>
+																			</ChildItems>
+																		</UsualGroup>
 																		<InputField name="ДымовыеТестыКаталогВыходныхФайлов" id="3965">
 																			<DataPath>Объект.ДымовыеТестыКаталогВыходныхФайлов</DataPath>
 																			<TitleLocation>Top</TitleLocation>
@@ -13715,7 +13845,7 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																				<Title formatted="false">
 																					<v8:item>
 																						<v8:lang>ru</v8:lang>
-																						<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениям. Для каждого вида объектов метаданных или события должен быть отдельный файл ("Справочники", "Документы" и т. д.).</v8:content>
+																						<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениями. Для каждого вида объектов метаданных или события должен быть отдельный файл ("Справочники", "Документы" и т. д.).</v8:content>
 																					</v8:item>
 																					<v8:item>
 																						<v8:lang>en</v8:lang>
@@ -13771,6 +13901,25 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаДымовыеТестыПравыйСтолбецРасширеннаяПодсказка" id="3964"/>
 																	<ChildItems>
+																		<CheckBoxField name="ДымовыеТестыОчищатьКаталогВыходныхФайлов" id="4013">
+																			<DataPath>Объект.ДымовыеТестыОчищатьКаталогВыходныхФайлов</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ДымовыеТестыОчищатьКаталогВыходныхФайловКонтекстноеМеню" id="4014"/>
+																			<ExtendedTooltip name="ДымовыеТестыОчищатьКаталогВыходныхФайловРасширеннаяПодсказка" id="4015">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если установлен, то feature-файлы в каталоге выходных файлов будут удалены перед началом формирования тестов.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>If set, feature files in the output files directory will be deleted before tests are generated.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
 																		<CheckBoxField name="ДымовыеТестыТолькоВведенныеОбъекты" id="3983">
 																			<DataPath>Объект.ДымовыеТестыТолькоВведенныеОбъекты</DataPath>
 																			<TitleLocation>Right</TitleLocation>
@@ -13797,14 +13946,14 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ДымовыеТестыТолькоИзмененныеОтностительноКонфигурацииПоставщикаКонтекстноеМеню" id="3972"/>
 																			<ExtendedTooltip name="ДымовыеТестыТолькоИзмененныеОтностительноКонфигурацииПоставщикаРасширеннаяПодсказка" id="3973">
-																				<Title formatted="false">
+																				<Title formatted="true">
 																					<v8:item>
 																						<v8:lang>ru</v8:lang>
-																						<v8:content>При включении данного флага в формировании feature-файлов будут участвовать только объекты измененные относительно конфигурации поставщика. Для построения отчета о сравнении конфигураций будет запущен конфигуратор текущей информационной базы.</v8:content>
+																						<v8:content>При включении данного флага в формировании feature-файлов будут участвовать только объекты измененные относительно конфигурации поставщика. Для построения отчета о сравнении конфигураций будет &lt;b&gt;запущен конфигуратор&lt;/&gt; текущей информационной базы с &lt;b&gt;текущим пользователем&lt;/&gt; и &lt;b&gt;пустым паролем&lt;/&gt;. </v8:content>
 																					</v8:item>
 																					<v8:item>
 																						<v8:lang>en</v8:lang>
-																						<v8:content>When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase configurator will be launched.</v8:content>
+																						<v8:content>When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase &lt;b&gt;configurator&lt;/&gt; will be launched with the &lt;b&gt;current user&lt;/&gt; and an &lt;b&gt;empty password&lt;/&gt;.</v8:content>
 																					</v8:item>
 																				</Title>
 																			</ExtendedTooltip>
@@ -15571,25 +15720,24 @@ The file name will be generated according to the rule TestingClientName+LaunchDa
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияПятаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3759"/>
 																	<ChildItems>
-																		<CheckBoxField name="ОтключитьЗапускРеглЗаданийВФайловойБазе" id="3760">
-																			<DataPath>Объект.ОтключитьЗапускРеглЗаданийВФайловойБазе</DataPath>
-																			<TitleLocation>Right</TitleLocation>
+																		<InputField name="ДополнительныеПараметрыЗапускаКлиентаТестирования" id="4071">
+																			<DataPath>Объект.ДополнительныеПараметрыЗапускаКлиентаТестирования</DataPath>
+																			<TitleLocation>Top</TitleLocation>
 																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ОтключитьЗапускРеглЗаданийВФайловойБазеКонтекстноеМеню" id="3761"/>
-																			<ExtendedTooltip name="ОтключитьЗапускРеглЗаданийВФайловойБазеРасширеннаяПодсказка" id="3762">
+																			<ContextMenu name="ДополнительныеПараметрыЗапускаКлиентаТестированияКонтекстноеМеню" id="4072"/>
+																			<ExtendedTooltip name="ДополнительныеПараметрыЗапускаКлиентаТестированияРасширеннаяПодсказка" id="4073">
 																				<Title formatted="false">
 																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Если опция включена, при запуске клиента тестирования в файловой базе будет отключен запуск регламентных заданий. Используется ключ командной строки /AllowExecuteScheduledJobs -Off</v8:content>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>The field specifies additional keys for launching the testing client, which will be transferred to the launched 1C session.</v8:content>
 																					</v8:item>
 																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off</v8:content>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>В поле указываются дополнительные ключи запуска клиента тестирования, которые будут передаваться запускаемому сеансу 1С</v8:content>
 																					</v8:item>
 																				</Title>
 																			</ExtendedTooltip>
-																		</CheckBoxField>
+																		</InputField>
 																	</ChildItems>
 																</UsualGroup>
 																<UsualGroup name="ГруппаЗапускКлиентаТестированияПятаяСтрокаПравыйСтолбец" id="3763">
@@ -15666,6 +15814,42 @@ This can be useful if the computers on which the tests are run have a limited am
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияШестаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3928"/>
 																	<ChildItems>
+																		<CheckBoxField name="ОтключитьЗапускРеглЗаданийВФайловойБазе" id="3760">
+																			<DataPath>Объект.ОтключитьЗапускРеглЗаданийВФайловойБазе</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ОтключитьЗапускРеглЗаданийВФайловойБазеКонтекстноеМеню" id="3761"/>
+																			<ExtendedTooltip name="ОтключитьЗапускРеглЗаданийВФайловойБазеРасширеннаяПодсказка" id="3762">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если опция включена, при запуске клиента тестирования в файловой базе будет отключен запуск регламентных заданий. Используется ключ командной строки /AllowExecuteScheduledJobs -Off</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЗапускКлиентаТестированияШестаяСтрокаПравыйСтолбец" id="3932">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа запуск клиента тестирования шестая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test client launch group sixth row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияШестаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3933"/>
+																	<ChildItems>
 																		<CheckBoxField name="ПроверкаСерверныхВызововВОбработчикахСобытий" id="3934">
 																			<DataPath>Объект.ПроверкаСерверныхВызововВОбработчикахСобытий</DataPath>
 																			<TitleLocation>Right</TitleLocation>
@@ -15692,21 +15876,6 @@ If such messages were found, a script error will be raised.
 																			</ExtendedTooltip>
 																		</CheckBoxField>
 																	</ChildItems>
-																</UsualGroup>
-																<UsualGroup name="ГруппаЗапускКлиентаТестированияШестаяСтрокаПравыйСтолбец" id="3932">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Группа запуск клиента тестирования шестая строка правый столбец</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Test client launch group sixth row right column</v8:content>
-																		</v8:item>
-																	</Title>
-																	<Representation>None</Representation>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияШестаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3933"/>
 																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
@@ -16486,8 +16655,8 @@ This option only works under Windows.</v8:content>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаСкоростьВыполненияСценариевРасширеннаяПодсказка" id="3343"/>
 													<ChildItems>
-														<CheckBoxField name="ВыполнятьШагиАссинхронно" id="335">
-															<DataPath>Объект.ВыполнятьШагиАссинхронно</DataPath>
+														<CheckBoxField name="ВыполнятьШагиАсинхронно" id="335">
+															<DataPath>Объект.ВыполнятьШагиАсинхронно</DataPath>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
@@ -16587,8 +16756,8 @@ This option only works under Windows.</v8:content>
 															</ToolTip>
 															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ВыполнятьШагиАссинхронноКонтекстноеМеню" id="336"/>
-															<ExtendedTooltip name="ВыполнятьШагиАссинхронноРасширеннаяПодсказка" id="1374">
+															<ContextMenu name="ВыполнятьШагиАсинхронноКонтекстноеМеню" id="336"/>
+															<ExtendedTooltip name="ВыполнятьШагиАсинхронноРасширеннаяПодсказка" id="1374">
 																<Width>50</Width>
 																<AutoMaxWidth>false</AutoMaxWidth>
 																<HorizontalStretch>false</HorizontalStretch>
@@ -16608,7 +16777,7 @@ Scenario runs several times faster when the flag is off.</v8:content>
 																</Title>
 															</ExtendedTooltip>
 															<Events>
-																<Event name="OnChange">ВыполнятьШагиАссинхронноПриИзменении</Event>
+																<Event name="OnChange">ВыполнятьШагиАсинхронноПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
 														<InputField name="ИнтервалВыполненияШагаЗаданныйПользователем" id="2001">
@@ -17073,6 +17242,7 @@ Actual when working in the step tree mode.</v8:content>
 																	<v8:content>Group subsystem stabilization of test execution zero line</v8:content>
 																</v8:item>
 															</Title>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовНулеваяСтрокаРасширеннаяПодсказка" id="3942"/>
@@ -17112,6 +17282,55 @@ Actual when working in the step tree mode.</v8:content>
 																				</Title>
 																			</ExtendedTooltip>
 																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовНулеваяСтрокаПравыйСтолбец" id="4054">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа подсистема стабилизация выполнения тестов первая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test execution stabilization subsystem group first row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовНулеваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4055"/>
+																	<ChildItems>
+																		<CheckBoxField name="ОтключатьДляПолейВозможностьЗатиранияТекстаПриСерверномВызове" id="4056">
+																			<DataPath>Объект.ОтключатьДляПолейВозможностьЗатиранияТекстаПриСерверномВызове</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ОтключатьДляПолейВозможностьЗатиранияТекстаПриСерверномВызовеКонтекстноеМеню" id="4057"/>
+																			<ExtendedTooltip name="ОтключатьДляПолейВозможностьЗатиранияТекстаПриСерверномВызовеРасширеннаяПодсказка" id="4058">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>There is a problem that when synchronizing the state of the form after the server call has completed, the text that the user is currently editing may be overwritten.
+In tests, this can manifest itself in such a way that the test entered a value into a field, but before it began working with another field, this value was returned to its previous state.
+This option enables a mechanism where the "EditTextUpdate" property of form fields will change after calling the step
+   ```Gherkin
+   Then "WindowTitle" window is opened
+   ```
+For this option to work, the VAExtension extension must be installed in the testing client database.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Существует проблема, что при синхронизации состояния формы после завершения серверного вызова, может затираться текст, который в данный момент редактирует пользователь.
+В тестах это может проявляться так, что тест ввёл значение в поле, но до того как он начал работать с другим полем данное значение было возвращено в предыдущее состояние.
+Данная опция включает механизм, когда свойство "ОбновлениеТекстаРедактирования" у полей формы, будет изменяться после вызова шага
+   ```Gherkin
+   Тогда открылось окно "ИмяОкна"
+   ```
+Для работы опции в базе клиента тестирования должно быть установлено расширение VAExtension.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>
@@ -17346,6 +17565,7 @@ And I wait the window with header different from "WindowTitle" opening in 60 sec
 																	<v8:content>Group subsystem stabilization of test execution third line</v8:content>
 																</v8:item>
 															</Title>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаРасширеннаяПодсказка" id="3753"/>
@@ -17367,13 +17587,53 @@ And I wait the window with header different from "WindowTitle" opening in 60 sec
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3755"/>
 																	<ChildItems>
-																		<CheckBoxField name="БезопасноеВыполнениеШагов" id="1784">
+																		<InputField name="МаксимальноеВремяВыполненияДействия" id="4021">
+																			<DataPath>Объект.МаксимальноеВремяВыполненияДействия</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ContextMenu name="МаксимальноеВремяВыполненияДействияКонтекстноеМеню" id="4022"/>
+																			<ExtendedTooltip name="МаксимальноеВремяВыполненияДействияРасширеннаяПодсказка" id="4023">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Устанавливает максимальное время выполнения действий, которые возвращают значение в менеджер тестирования.
+При превышении заданного времени генерируется исключение "Превышено максимальное время выполнения действия на стороне клиента тестирования". При этом выполнение действия будет продолжено.
+Если параметр равен 0, команды ожидают окончания выполнения без проверки времени прошедшего с начала выполнения.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Sets the maximum execution time for actions that return a value to the test manager.
+If the specified time is exceeded, the exception "The maximum execution time of the action on the testing client side has been exceeded" is generated. In this case, the action will continue.
+If the parameter is 0, commands wait until the end of execution without checking the elapsed time since the start of execution.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаПравыйСтолбец" id="4016">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа подсистема стабилизация выполнения тестов третья строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group subsystem test execution stabilization third row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4017"/>
+																	<ChildItems>
+																		<CheckBoxField name="БезопасноеВыполнениеШагов" id="4018">
 																			<DataPath>Объект.БезопасноеВыполнениеШагов</DataPath>
 																			<TitleLocation>Right</TitleLocation>
 																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="БезопасноеВыполнениеШаговКонтекстноеМеню" id="1785"/>
-																			<ExtendedTooltip name="БезопасноеВыполнениеШаговРасширеннаяПодсказка" id="1786">
+																			<ContextMenu name="БезопасноеВыполнениеШаговКонтекстноеМеню" id="4019"/>
+																			<ExtendedTooltip name="БезопасноеВыполнениеШаговРасширеннаяПодсказка" id="4020">
 																				<AutoMaxWidth>false</AutoMaxWidth>
 																				<Title formatted="false">
 																					<v8:item>
@@ -18253,6 +18513,28 @@ For the option to work, it is necessary to enable the use of the VanessaExt exte
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="СтраницаСкриншотыТретьяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3405"/>
+															<ChildItems>
+																<InputField name="ПроцессыДляСнятияСкриншотов" id="4068">
+																	<DataPath>Объект.ПроцессыДляСнятияСкриншотов</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ContextMenu name="ПроцессыДляСнятияСкриншотовКонтекстноеМеню" id="4069"/>
+																	<ExtendedTooltip name="ПроцессыДляСнятияСкриншотовРасширеннаяПодсказка" id="4070">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>A semicolon-separated list of process names.
+You can use the * character to escape one or more characters in a process name.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Список имен процессов через точку с запятой.
+Можно использовать символ *, чтобы экранировать один или несколько символов в имени процесса.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
@@ -19226,6 +19508,7 @@ For this option to work, you must enable the use of the VanessaExt addin.</v8:co
 																			<v8:content>group log text third line left column</v8:content>
 																		</v8:item>
 																	</Title>
+																	<Width>50</Width>
 																	<Representation>None</Representation>
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаЛогТекстТретьяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3439"/>
@@ -19255,6 +19538,46 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																				<Event name="StartChoice">КаталогOutputВнутреннийФорматНачалоВыбора</Event>
 																			</Events>
 																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЛогТекстТретьяСтрокаПравыйСтолбец" id="4143">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа лог текст третья строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group log text third row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЛогТекстТретьяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4144"/>
+																	<ChildItems>
+																		<CheckBoxField name="МаскироватьПарольВЛоге" id="4137">
+																			<DataPath>Объект.МаскироватьПарольВЛоге</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="МаскироватьПарольВЛогеКонтекстноеМеню" id="4138"/>
+																			<ExtendedTooltip name="МаскироватьПарольВЛогеРасширеннаяПодсказка" id="4139">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Маскируется пароль пользователя в логе /P"*****"</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>The user's password is masked in the log /P"*****"</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																			<Events>
+																				<Event name="OnChange">МаскироватьПарольВЛогеПриИзменении</Event>
+																			</Events>
+																		</CheckBoxField>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>
@@ -19398,6 +19721,7 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																							<v8:content>Allure group basic settings first row right column</v8:content>
 																						</v8:item>
 																					</Title>
+																					<Group>Vertical</Group>
 																					<Representation>None</Representation>
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаAllureОсновныеНастройкиПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3694"/>
@@ -19422,6 +19746,111 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																								</Title>
 																							</ExtendedTooltip>
 																						</CheckBoxField>
+																						<InputField name="СписокИсключаемыхПеременныхAllure" id="4140">
+																							<DataPath>Объект.СписокИсключаемыхПеременныхAllure</DataPath>
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Список имен переменных исключаемых из замены</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>List of excluded variables</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>am</v8:lang>
+																									<v8:content>አዳዲስ ሆኖ ይታያል</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>az</v8:lang>
+																									<v8:content>Siyahısı tags исключаемых</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>bg</v8:lang>
+																									<v8:content>Списък на изключване на тагове</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>de</v8:lang>
+																									<v8:content>Liste der ausgeschlossenen variablen</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>es</v8:lang>
+																									<v8:content>La lista de variables excluidas</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>et</v8:lang>
+																									<v8:content>Nimekiri исключаемых-i</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>fr</v8:lang>
+																									<v8:content>La liste des variables exclues</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>hu</v8:lang>
+																									<v8:content>A lista kizárt kategória</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>it</v8:lang>
+																									<v8:content>Elenco delle variabili escluse</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>ka</v8:lang>
+																									<v8:content>სია გამორიცხული საკვანძო სიტყვები</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>lt</v8:lang>
+																									<v8:content>Sąrašas žymių исключаемых</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>lv</v8:lang>
+																									<v8:content>Saraksts atbrīvoto tagiem</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>mn</v8:lang>
+																									<v8:content>Жагсаалтаас хассан tags</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>pl</v8:lang>
+																									<v8:content>Lista blokowanych elementów</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>ro</v8:lang>
+																									<v8:content>Lista excluse tag-uri</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>sl</v8:lang>
+																									<v8:content>Seznam izključenih oznake</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>sv</v8:lang>
+																									<v8:content>Listan över undantagna taggar</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>tr</v8:lang>
+																									<v8:content>İstisna listesi etiketleri</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>vi</v8:lang>
+																									<v8:content>Danh sách các tag bị loại trừ</v8:content>
+																								</v8:item>
+																							</Title>
+																							<TitleLocation>Top</TitleLocation>
+																							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																							<ContextMenu name="СписокИсключаемыхПеременныхAllureКонтекстноеМеню" id="4141"/>
+																							<ExtendedTooltip name="СписокИсключаемыхПеременныхAllureРасширеннаяПодсказка" id="4142">
+																								<AutoMaxWidth>false</AutoMaxWidth>
+																								<Title formatted="true">
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Имена переменных из списка не будут заменены на их значения</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Enter tags in the field. If the tag is detected in the feature, the whole feature will not be uploaded. If the tag is found in the scenario, only this scenario will not be uploaded.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																						</InputField>
 																					</ChildItems>
 																				</UsualGroup>
 																			</ChildItems>
@@ -21006,34 +21435,162 @@ You can read more about why this may be needed here
 																	<v8:content>Group SPPR Settings</v8:content>
 																</v8:item>
 															</ToolTip>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаСППРНастройкиРасширеннаяПодсказка" id="2103"/>
 															<ChildItems>
-																<InputField name="КаталогВыгрузкиСППР" id="2099">
-																	<DataPath>Объект.КаталогВыгрузкиСППР</DataPath>
-																	<TitleLocation>Top</TitleLocation>
-																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																	<ChoiceButton>true</ChoiceButton>
-																	<ClearButton>true</ClearButton>
-																	<ContextMenu name="КаталогВыгрузкиСППРКонтекстноеМеню" id="2100"/>
-																	<ExtendedTooltip name="КаталогВыгрузкиСППРРасширеннаяПодсказка" id="2101">
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Каталог для формирования отчета.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Report directory.</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																	<Events>
-																		<Event name="StartChoice">КаталогВыгрузкиСППРНачалоВыбора</Event>
-																	</Events>
-																</InputField>
+																<UsualGroup name="ГруппаНастройкиСППРПерваяСтрока" id="4030">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа настройки СППР первая строка</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>SPPR settings group first line</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>AlwaysHorizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаНастройкиСППРПерваяСтрокаРасширеннаяПодсказка" id="4031"/>
+																	<ChildItems>
+																		<UsualGroup name="ГруппаНастройкиСППРПерваяСтрокаЛевыйСтолбец" id="4032">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа настройки СППР первая строка левый столбец</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>SPPR settings group first line left column</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Width>50</Width>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаНастройкиСППРПерваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4033"/>
+																			<ChildItems>
+																				<InputField name="КаталогВыгрузкиСППР" id="2099">
+																					<DataPath>Объект.КаталогВыгрузкиСППР</DataPath>
+																					<TitleLocation>Top</TitleLocation>
+																					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																					<ChoiceButton>true</ChoiceButton>
+																					<ClearButton>true</ClearButton>
+																					<ContextMenu name="КаталогВыгрузкиСППРКонтекстноеМеню" id="2100"/>
+																					<ExtendedTooltip name="КаталогВыгрузкиСППРРасширеннаяПодсказка" id="2101">
+																						<AutoMaxWidth>false</AutoMaxWidth>
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Каталог для формирования отчета.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Report directory.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																					<Events>
+																						<Event name="StartChoice">КаталогВыгрузкиСППРНачалоВыбора</Event>
+																					</Events>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="ГруппаНастройкиСППРПерваяСтрокаПравыйСтолбец" id="4034">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа настройки СППР первая строка правый столбец</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>SPPR settings group first line right column</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаНастройкиСППРПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4035"/>
+																			<ChildItems>
+																				<InputField name="ИмяКонфигурацииСППР" id="4024">
+																					<DataPath>Объект.ИмяКонфигурацииСППР</DataPath>
+																					<TitleLocation>Top</TitleLocation>
+																					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																					<ContextMenu name="ИмяКонфигурацииСППРКонтекстноеМеню" id="4025"/>
+																					<ExtendedTooltip name="ИмяКонфигурацииСППРРасширеннаяПодсказка" id="4026">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Имя конфигурации для отчета</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Configuration name for the report</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаНастройкиСППРВтораяСтрока" id="4036">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа настройки СППР вторая строка</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>SPPR settings group second line</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>AlwaysHorizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаНастройкиСППРВтораяСтрокаРасширеннаяПодсказка" id="4037"/>
+																	<ChildItems>
+																		<UsualGroup name="ГруппаНастройкиСППРВтораяСтрокаЛевыйСтолбец" id="4038">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа настройки СППР вторая строка левый столбец</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>SPPR settings group second line left column</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Width>50</Width>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаНастройкиСППРВтораяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4039"/>
+																			<ChildItems>
+																				<InputField name="ВерсияКонфигурацииСППР" id="4027">
+																					<DataPath>Объект.ВерсияКонфигурацииСППР</DataPath>
+																					<TitleLocation>Top</TitleLocation>
+																					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																					<ContextMenu name="ВерсияКонфигурацииСППРКонтекстноеМеню" id="4028"/>
+																					<ExtendedTooltip name="ВерсияКонфигурацииСППРРасширеннаяПодсказка" id="4029">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Версия конфигурации для отчета</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Configuration version for report</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																	</ChildItems>
+																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
@@ -24574,6 +25131,23 @@ If you need to take only one screenshot for a group of steps, you can specify th
 																								<Presentation>
 																									<v8:item>
 																										<v8:lang>ru</v8:lang>
+																										<v8:content>1С</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>1C</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:decimal">4</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
 																										<v8:content>Microsoft TTS</v8:content>
 																									</v8:item>
 																									<v8:item>
@@ -24697,6 +25271,294 @@ If you need to take only one screenshot for a group of steps, you can specify th
 																					<PagesRepresentation>None</PagesRepresentation>
 																					<ExtendedTooltip name="СтраницыНастроекОзвучанияРасширеннаяПодсказка" id="2080"/>
 																					<ChildItems>
+																						<Page name="ГруппаОзвучкаОт1С" id="4074">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Озвучка от 1С</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Voiceover from 1C</v8:content>
+																								</v8:item>
+																							</Title>
+																							<ExtendedTooltip name="ГруппаОзвучкаОт1СРасширеннаяПодсказка" id="4075"/>
+																							<ChildItems>
+																								<UsualGroup name="Группа1СTTSПерваяСтрока" id="4092">
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Группа 1С TTS Первая строка</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Group 1C TTS First line</v8:content>
+																										</v8:item>
+																									</Title>
+																									<Group>AlwaysHorizontal</Group>
+																									<Representation>NormalSeparation</Representation>
+																									<ShowTitle>false</ShowTitle>
+																									<ExtendedTooltip name="Группа1СTTSПерваяСтрокаРасширеннаяПодсказка" id="4093"/>
+																									<ChildItems>
+																										<UsualGroup name="Группа1СTTSПерваяСтрокаЛевыйСтолбец" id="4088">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Группа 1С TTS Первая строка левый столбец</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Group 1C TTS First row left column</v8:content>
+																												</v8:item>
+																											</Title>
+																											<Width>50</Width>
+																											<HorizontalStretch>false</HorizontalStretch>
+																											<Representation>None</Representation>
+																											<ShowTitle>false</ShowTitle>
+																											<ExtendedTooltip name="Группа1СTTSПерваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4089"/>
+																											<ChildItems>
+																												<InputField name="ЗаписьВидео1СЛогин" id="4076">
+																													<DataPath>Объект.ЗаписьВидео1СЛогин</DataPath>
+																													<TitleLocation>Top</TitleLocation>
+																													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																													<ContextMenu name="ЗаписьВидео1СЛогинКонтекстноеМеню" id="4077"/>
+																													<ExtendedTooltip name="ЗаписьВидео1СЛогинРасширеннаяПодсказка" id="4078">
+																														<AutoMaxWidth>false</AutoMaxWidth>
+																														<Title formatted="false">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Логин для авторизации в сервисе синтеза речи</v8:content>
+																															</v8:item>
+																															<v8:item>
+																																<v8:lang>en</v8:lang>
+																																<v8:content>Login for authorization in the speech synthesis service</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																												</InputField>
+																											</ChildItems>
+																										</UsualGroup>
+																										<UsualGroup name="Группа1СTTSПерваяСтрокаПравыйСтолбец" id="4090">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Группа 1С TTS Первая строка правый столбец</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Group 1C TTS First row right column</v8:content>
+																												</v8:item>
+																											</Title>
+																											<Representation>None</Representation>
+																											<ShowTitle>false</ShowTitle>
+																											<ExtendedTooltip name="Группа1СTTSПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4091"/>
+																											<ChildItems>
+																												<InputField name="ЗаписьВидео1СГолос" id="4085">
+																													<DataPath>Объект.ЗаписьВидео1СГолос</DataPath>
+																													<TitleLocation>Top</TitleLocation>
+																													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																													<ListChoiceMode>true</ListChoiceMode>
+																													<ChooseType>false</ChooseType>
+																													<ChoiceList>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Артем</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Ирина</Value>
+																															</xr:Value>
+																														</xr:Item>
+																													</ChoiceList>
+																													<ContextMenu name="ЗаписьВидео1СГолосКонтекстноеМеню" id="4086"/>
+																													<ExtendedTooltip name="ЗаписьВидео1СГолосРасширеннаяПодсказка" id="4087">
+																														<Title formatted="false">
+																															<v8:item>
+																																<v8:lang>en</v8:lang>
+																																<v8:content>Voice for speech generation in the service</v8:content>
+																															</v8:item>
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Голос для генерации речи в сервисе</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																												</InputField>
+																											</ChildItems>
+																										</UsualGroup>
+																									</ChildItems>
+																								</UsualGroup>
+																								<UsualGroup name="Группа1СTTSВтораяСтрока" id="4094">
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Группа 1С TTS Вторая строка</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Group 1C TTS Second line</v8:content>
+																										</v8:item>
+																									</Title>
+																									<Group>AlwaysHorizontal</Group>
+																									<Representation>NormalSeparation</Representation>
+																									<ShowTitle>false</ShowTitle>
+																									<ExtendedTooltip name="Группа1СTTSВтораяСтрокаРасширеннаяПодсказка" id="4095"/>
+																									<ChildItems>
+																										<UsualGroup name="Группа1СTTSВтораяСтрокаЛевыйСтолбец" id="4096">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Группа 1С TTS Вторая строка левый столбец</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Group 1C TTS Second row left column</v8:content>
+																												</v8:item>
+																											</Title>
+																											<Width>50</Width>
+																											<HorizontalStretch>false</HorizontalStretch>
+																											<Representation>None</Representation>
+																											<ShowTitle>false</ShowTitle>
+																											<ExtendedTooltip name="Группа1СTTSВтораяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4097"/>
+																											<ChildItems>
+																												<InputField name="ЗаписьВидео1СПароль" id="4079">
+																													<DataPath>Объект.ЗаписьВидео1СПароль</DataPath>
+																													<TitleLocation>Top</TitleLocation>
+																													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																													<ChoiceButton>true</ChoiceButton>
+																													<ContextMenu name="ЗаписьВидео1СПарольКонтекстноеМеню" id="4080"/>
+																													<ExtendedTooltip name="ЗаписьВидео1СПарольРасширеннаяПодсказка" id="4081">
+																														<Title formatted="false">
+																															<v8:item>
+																																<v8:lang>en</v8:lang>
+																																<v8:content>Password for authorization in the speech synthesis service.
+The password is specified in the text file.</v8:content>
+																															</v8:item>
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Пароль для авторизации в сервисе синтеза речи.
+Пароль указывается в текстовом файле.</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																													<Events>
+																														<Event name="StartChoice">ЗаписьВидео1СПарольНачалоВыбора</Event>
+																													</Events>
+																												</InputField>
+																											</ChildItems>
+																										</UsualGroup>
+																										<UsualGroup name="Группа1СTTSВтораяСтрокаПравыйСтолбец" id="4101">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Группа 1С TTS Вторая строка правый столбец</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Group 1C TTS Second row right column</v8:content>
+																												</v8:item>
+																											</Title>
+																											<Representation>None</Representation>
+																											<ShowTitle>false</ShowTitle>
+																											<ExtendedTooltip name="Группа1СTTSВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4102"/>
+																											<ChildItems>
+																												<InputField name="ЗаписьВидео1ССкоростьРечи" id="4111">
+																													<DataPath>Объект.ЗаписьВидео1ССкоростьРечи</DataPath>
+																													<TitleLocation>Top</TitleLocation>
+																													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																													<ChoiceButton>false</ChoiceButton>
+																													<SpinButton>true</SpinButton>
+																													<MinValue xsi:type="xs:decimal">0.8</MinValue>
+																													<MaxValue xsi:type="xs:decimal">2</MaxValue>
+																													<ContextMenu name="ЗаписьВидео1ССкоростьРечиКонтекстноеМеню" id="4112"/>
+																													<ExtendedTooltip name="ЗаписьВидео1ССкоростьРечиРасширеннаяПодсказка" id="4113">
+																														<Title formatted="false">
+																															<v8:item>
+																																<v8:lang>en</v8:lang>
+																																<v8:content>Speed (tempo) of synthesized speech.
+Speech speed is specified by a fractional number in the range from 0.8 to 2.</v8:content>
+																															</v8:item>
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Скорость (темп) синтезированной речи.
+Скорость речи задается дробным числом в диапазоне от 0.8 до 2.</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																													<Events>
+																														<Event name="Tuning">ЗаписьВидео1ССкоростьРечиРегулирование</Event>
+																													</Events>
+																												</InputField>
+																											</ChildItems>
+																										</UsualGroup>
+																									</ChildItems>
+																								</UsualGroup>
+																								<UsualGroup name="Группа1СTTSТретьяСтрока" id="4103">
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Группа 1С TTS Третья строка</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Group 1C TTS Third line</v8:content>
+																										</v8:item>
+																									</Title>
+																									<Group>AlwaysHorizontal</Group>
+																									<Representation>NormalSeparation</Representation>
+																									<ShowTitle>false</ShowTitle>
+																									<ExtendedTooltip name="Группа1СTTSТретьяСтрокаРасширеннаяПодсказка" id="4104"/>
+																									<ChildItems>
+																										<UsualGroup name="Группа1СTTSТретьяСтрокаЛевыйСтолбец" id="4105">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Группа 1С TTS Третья строка левый столбец</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Group 1C TTS Third row left column</v8:content>
+																												</v8:item>
+																											</Title>
+																											<Width>50</Width>
+																											<HorizontalStretch>false</HorizontalStretch>
+																											<Representation>None</Representation>
+																											<ShowTitle>false</ShowTitle>
+																											<ExtendedTooltip name="Группа1СTTSТретьяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4106"/>
+																											<ChildItems>
+																												<Button name="ЗаписьВидео1САвторизацияВСервисе" id="4107">
+																													<Type>UsualButton</Type>
+																													<CommandName>Form.Command.ЗаписьВидео1САвторизацияВСервисе</CommandName>
+																													<ExtendedTooltip name="ЗаписьВидео1САвторизацияВСервисеРасширеннаяПодсказка" id="4108"/>
+																												</Button>
+																											</ChildItems>
+																										</UsualGroup>
+																										<UsualGroup name="Группа1СTTSТретьяСтрокаПравыйСтолбец" id="4109">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Группа 1С TTS Третья строка правый столбец</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Group 1C TTS Third row right column</v8:content>
+																												</v8:item>
+																											</Title>
+																											<Representation>None</Representation>
+																											<ShowTitle>false</ShowTitle>
+																											<ExtendedTooltip name="Группа1СTTSТретьяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4110"/>
+																										</UsualGroup>
+																									</ChildItems>
+																								</UsualGroup>
+																							</ChildItems>
+																						</Page>
 																						<Page name="ГруппаMicrosoftTTS" id="1963">
 																							<Title>
 																								<v8:item>
@@ -24733,7 +25595,7 @@ If you need to take only one screenshot for a group of steps, you can specify th
 																											<v8:item>
 																												<v8:lang>ru</v8:lang>
 																												<v8:content>Консольная команда, которая будет использована при конвертации текста в речь.
-Используется программа &lt;link http://www.cross-plus-a.ru/bconsole.html&gt;balabolka_console&lt;/&gt;.</v8:content>
+Используется программа &lt;link https://cross-plus-a.com/bconsole.htm&gt;balabolka_console&lt;/&gt;.</v8:content>
 																											</v8:item>
 																											<v8:item>
 																												<v8:lang>en</v8:lang>
@@ -25993,6 +26855,14 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																												<Presentation/>
 																												<Value xsi:type="xs:string">Dora</Value>
+																											</xr:Value>
+																										</xr:Item>
+																										<xr:Item>
+																											<xr:Presentation/>
+																											<xr:CheckState>0</xr:CheckState>
+																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																												<Presentation/>
+																												<Value xsi:type="xs:string">Elin</Value>
 																											</xr:Value>
 																										</xr:Item>
 																										<xr:Item>
@@ -32612,6 +33482,13 @@ Click on the hyperlink for more details.</v8:content>
 															<ContextMenu name="ТаблицаИзвестныхStepDefinitionТипШагаВДеревеКонтекстноеМеню" id="2381"/>
 															<ExtendedTooltip name="ТаблицаИзвестныхStepDefinitionТипШагаВДеревеРасширеннаяПодсказка" id="2382"/>
 														</InputField>
+														<CheckBoxField name="ТаблицаИзвестныхStepDefinitionШагИзФормыКонфигурацииИлиРасширения" id="4134">
+															<DataPath>ТаблицаИзвестныхStepDefinition.ШагИзФормыКонфигурацииИлиРасширения</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаИзвестныхStepDefinitionШагИзФормыКонфигурацииИлиРасширенияКонтекстноеМеню" id="4135"/>
+															<ExtendedTooltip name="ТаблицаИзвестныхStepDefinitionШагИзФормыКонфигурацииИлиРасширенияРасширеннаяПодсказка" id="4136"/>
+														</CheckBoxField>
 													</ChildItems>
 												</Table>
 											</ChildItems>
@@ -32652,10 +33529,187 @@ Click on the hyperlink for more details.</v8:content>
 							<v8:content>View variables</v8:content>
 						</v8:item>
 					</Title>
+					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПросмотрПеременныхРасширеннаяПодсказка" id="1887"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаКнопокПросмотрПеременных" id="4046">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопок просмотр переменных</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group of buttons to view variables</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопокПросмотрПеременныхРасширеннаяПодсказка" id="4047"/>
+							<ChildItems>
+								<Button name="ТаблоПеременныхОбновитьТаблоПеременных" id="1943">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>3</Width>
+									<CommandName>Form.Command.ОбновитьТаблоПеременных</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.Refresh</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обновить табло переменных</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Refresh variables boar</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ТаблоПеременныхОбновитьТаблоПеременныхРасширеннаяПодсказка" id="1944"/>
+								</Button>
+								<Button name="ТаблоПеременныхПоказатьСлужебныеПеременные" id="2527">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоказатьСлужебныеПеременные</CommandName>
+									<ExtendedTooltip name="ТаблоПеременныхПоказатьСлужебныеПеременныеРасширеннаяПодсказка" id="2528"/>
+								</Button>
+								<Button name="ТаблоПеременныхЗакрытьТаблоПеременных" id="2058">
+									<Type>UsualButton</Type>
+									<Width>10</Width>
+									<CommandName>Form.Command.ЗакрытьТаблоПеременных</CommandName>
+									<ExtendedTooltip name="ТаблоПеременныхЗакрытьТаблоПеременныхРасширеннаяПодсказка" id="2059"/>
+								</Button>
+								<CommandBar name="КоманднаяПанельСохранитьЗагрузитьПеременныеИзФайла" id="4130">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель переменные из файла</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Command panel variables from file</v8:content>
+										</v8:item>
+									</Title>
+									<Width>9</Width>
+									<ExtendedTooltip name="КоманднаяПанельСохранитьЗагрузитьПеременныеИзФайлаРасширеннаяПодсказка" id="4131"/>
+									<ChildItems>
+										<Popup name="ГруппаКнопокСохранитьЗагрузитьПеременные" id="4132">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сохранить/загрузить переменные</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Save/Load Variables</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сохранить/загрузить переменные</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Save/Load Variables</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаКнопокСохранитьЗагрузитьПеременныеРасширеннаяПодсказка" id="4133"/>
+											<ChildItems>
+												<Button name="ТаблоПеременныхВыгрузить" id="4116">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ВыгрузитьИзТаблоПеременных</CommandName>
+													<ExtendedTooltip name="ТаблоПеременныхВыгрузитьРасширеннаяПодсказка" id="4117"/>
+												</Button>
+												<Button name="ТаблоПеременныхЗагрузить" id="4114">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ЗагрузитьВТаблоПеременных</CommandName>
+													<ExtendedTooltip name="ТаблоПеременныхЗагрузитьРасширеннаяПодсказка" id="4115"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+									</ChildItems>
+								</CommandBar>
+								<CommandBar name="КоманднаяПанельСистемыОтката" id="4122">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель системы отката</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>The command panel of the rollback system</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель системы отката</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>The command panel of the rollback system</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>10</Width>
+									<ExtendedTooltip name="КоманднаяПанельСистемыОткатаРасширеннаяПодсказка" id="4123"/>
+									<ChildItems>
+										<Popup name="ГруппаКнопокСистемыОтката" id="4082">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Cистема отката</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Rollback System Buttons</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Система отката</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Rollback System Buttons</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаКнопокСистемыОткатаРасширеннаяПодсказка" id="4083"/>
+											<ChildItems>
+												<Button name="ЗагрузитьИзСистемыОтката" id="4127">
+													<Type>CommandBarButton</Type>
+													<Enabled>false</Enabled>
+													<CommandName>Form.Command.ЗагрузитьИзСистемыОтката</CommandName>
+													<ExtendedTooltip name="ЗагрузитьИзСистемыОткатаРасширеннаяПодсказка" id="4118"/>
+												</Button>
+												<Button name="ВыгрузитьВСистемуОтката" id="4119">
+													<Type>CommandBarButton</Type>
+													<Enabled>false</Enabled>
+													<CommandName>Form.Command.ВыгрузитьВСистемуОтката</CommandName>
+													<ExtendedTooltip name="ВыгрузитьВСистемуОткатаРасширеннаяПодсказка" id="4120"/>
+												</Button>
+												<Button name="ИнформацияОСистемеОтката" id="4084">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ИнформацияОСистемеОтката</CommandName>
+													<ExtendedTooltip name="ИнформацияОСистемеОткатаРасширеннаяПодсказка" id="4121"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+									</ChildItems>
+								</CommandBar>
+								<InputField name="ШагПроверкиЗначенияПеременной" id="4043">
+									<DataPath>ШагПроверкиЗначенияПеременной</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ШагПроверкиЗначенияПеременнойКонтекстноеМеню" id="4044"/>
+									<ExtendedTooltip name="ШагПроверкиЗначенияПеременнойРасширеннаяПодсказка" id="4045"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="ТаблоПеременных" id="1915">
 							<Representation>Tree</Representation>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -32676,28 +33730,6 @@ Click on the hyperlink for more details.</v8:content>
 							<ContextMenu name="ТаблоПеременныхКонтекстноеМеню" id="1916"/>
 							<AutoCommandBar name="ТаблоПеременныхКоманднаяПанель" id="1917">
 								<Autofill>false</Autofill>
-								<ChildItems>
-									<Button name="ТаблоПеременныхОбновитьТаблоПеременных" id="1943">
-										<Type>CommandBarButton</Type>
-										<Representation>Picture</Representation>
-										<CommandName>Form.Command.ОбновитьТаблоПеременных</CommandName>
-										<Picture>
-											<xr:Ref>StdPicture.Refresh</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</Picture>
-										<ExtendedTooltip name="ТаблоПеременныхОбновитьТаблоПеременныхРасширеннаяПодсказка" id="1944"/>
-									</Button>
-									<Button name="ТаблоПеременныхПоказатьСлужебныеПеременные" id="2527">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ПоказатьСлужебныеПеременные</CommandName>
-										<ExtendedTooltip name="ТаблоПеременныхПоказатьСлужебныеПеременныеРасширеннаяПодсказка" id="2528"/>
-									</Button>
-									<Button name="ТаблоПеременныхЗакрытьТаблоПеременных" id="2058">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ЗакрытьТаблоПеременных</CommandName>
-										<ExtendedTooltip name="ТаблоПеременныхЗакрытьТаблоПеременныхРасширеннаяПодсказка" id="2059"/>
-									</Button>
-								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблоПеременныхРасширеннаяПодсказка" id="1918"/>
 							<SearchStringAddition name="ТаблоПеременныхСтрокаПоиска" id="1919">
@@ -32727,6 +33759,7 @@ Click on the hyperlink for more details.</v8:content>
 							<Events>
 								<Event name="BeforeAddRow">ТаблоПеременныхПередНачаломДобавления</Event>
 								<Event name="BeforeDeleteRow">ТаблоПеременныхПередУдалением</Event>
+								<Event name="OnActivateRow">ТаблоПеременныхПриАктивизацииСтроки</Event>
 								<Event name="BeforeRowChange">ТаблоПеременныхПередНачаломИзменения</Event>
 							</Events>
 							<ChildItems>
@@ -33914,6 +34947,21 @@ Click on the hyperlink for more details.</v8:content>
 						</v8:item>
 					</Title>
 					<Type/>
+				</Column>
+				<Column name="ШагИзФормыКонфигурацииИлиРасширения" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаг из формы конфигурации или расширения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Step from a configuration or extension form</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
 				</Column>
 			</Columns>
 		</Attribute>
@@ -36011,6 +37059,25 @@ Click on the hyperlink for more details.</v8:content>
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Template VanessaEditor</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ШагПроверкиЗначенияПеременной" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаг проверки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Verification step</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -41482,7 +42549,7 @@ Click on the hyperlink for more details.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Подбор шагов</v8:content>
+					<v8:content>Библиотека шагов (подбор шагов)</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -44069,6 +45136,206 @@ Click on the hyperlink for more details.</v8:content>
 				</v8:item>
 			</Title>
 			<Action>ОбновитьКешMp3ВКаталогеПоТекущемуКешуMp3</Action>
+		</Command>
+		<Command name="ЗаменитьШагПроверкиПоИмениНаШагПроверкиПоЗаголовку" id="184">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить шаг проверки по имени на шаг проверки по заголовку и наоборот</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Replace a verification step by name with a verification step by title and vice versa</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить шаг проверки по имени на шаг проверки по заголовку и наоборот</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Replace a verification step by name with a verification step by title and vice versa</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+J</Shortcut>
+			<Action>ЗаменитьШагПроверкиПоИмениНаШагПроверкиПоЗаголовку</Action>
+		</Command>
+		<Command name="ОбработчикВключенияПоказаСправкиПоЭлементуПодКурсоромМышки" id="185">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработчик включения показа справки по элементу под курсором мышки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Handler for enabling display of help for an element under the mouse cursor</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Alt+H</Shortcut>
+			<Action>ОбработчикВключенияПоказаСправкиПоЭлементуПодКурсоромМышки</Action>
+		</Command>
+		<Command name="ОткрытьСериализаторМакетов" id="186">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть сериализатор макетов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open Layout Serializer</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть сериализатор макетов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open Layout Serializer</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСериализаторМакетов</Action>
+		</Command>
+		<Command name="ЗаписьВидео1САвторизацияВСервисе" id="187">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация (синтез речи 1С)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Authorization (1C speech synthesis)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация (синтез речи 1С)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Authorization (1C speech synthesis)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписьВидео1САвторизацияВСервисе</Action>
+		</Command>
+		<Command name="ВыгрузитьИзТаблоПеременных" id="188">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить переменные в файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save variables to file</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить переменные в файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload variables to a file</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьПеременные</Action>
+		</Command>
+		<Command name="ВыгрузитьВСистемуОтката" id="189">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить переменные в систему отката</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload variables to the rollback system</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить переменные в систему отката</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload variables to the rollback system</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВСистемуОтката</Action>
+		</Command>
+		<Command name="ЗагрузитьИзСистемыОтката" id="190">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить переменные из системы отката</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load variables from the rollback system</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить переменные из системы отката</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load variables from the rollback system</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзСистемыОтката</Action>
+		</Command>
+		<Command name="ИнформацияОСистемеОтката" id="191">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о системе отката</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Information about the rollback system</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о системе отката</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Information about the rollback system</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaИнформацияОСистемеОтката</Action>
+		</Command>
+		<Command name="Команда1" id="192"/>
+		<Command name="ЗагрузитьВТаблоПеременных" id="193">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить переменные из файла</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load variables from file</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить переменные из файла</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load variables from a file</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьПеременные</Action>
 		</Command>
 	</Commands>
 </Form>

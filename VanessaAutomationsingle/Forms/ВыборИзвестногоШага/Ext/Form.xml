@@ -375,6 +375,7 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ДеревоШаговВыбор</Event>
+								<Event name="OnActivateRow">ДеревоШаговПриАктивизацииСтроки</Event>
 							</Events>
 							<ChildItems>
 								<ColumnGroup name="ДеревоШаговГруппа" id="74">
@@ -524,6 +525,26 @@
 									<ContextMenu name="ДеревоШаговОписаниеШагаКонтекстноеМеню" id="99"/>
 									<ExtendedTooltip name="ДеревоШаговОписаниеШагаРасширеннаяПодсказка" id="100"/>
 								</InputField>
+								<HTMLDocumentField name="MarkdownViewer" id="131">
+									<DataPath>MarkdownViewer</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Описание</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Description</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="MarkdownViewerКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="MarkdownViewerРасширеннаяПодсказка" id="133"/>
+									<Events>
+										<Event name="DocumentComplete">MarkdownViewerДокументСформирован</Event>
+										<Event name="OnClick">MarkdownViewerПриНажатии</Event>
+									</Events>
+								</HTMLDocumentField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -2198,6 +2219,40 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Parameter snippet</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьMarkdownViewer" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать markdown viewer</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use markdown viewer</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="MarkdownViewer" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание (Markdown)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Description (Markdown)</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
